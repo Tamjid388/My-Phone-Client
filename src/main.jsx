@@ -6,14 +6,17 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { Phones } from './Components/Phones.jsx';
+import { Main } from './Components/Main.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Main></Main>,
     children:[
       {
-        path:"/phones"
-        
+        path:"/phones",
+        element:<Phones></Phones>
+
       }
     ]
   },
